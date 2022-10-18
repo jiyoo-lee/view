@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>데이터 출력하는 페이지</title>
+</head>
+<body>
+<ul th:each="job, state: ${list}">
+  <li><span th:if="${job.sno%3 == 0}">[[${job.first}]]</span></li>
+    <li><span th:unless="${job.sno%3 == 0}">[[${job.last}]]</span></li>
+</ul>
+</body>
+</html>
